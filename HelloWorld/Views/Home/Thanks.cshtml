@@ -1,0 +1,34 @@
+﻿@model HelloWorld.Models.GuestResponse
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Thank you, @Model.Name, @Model.Email.</h5>
+                <p class="card-text">
+                    @if (Model.WillAttend == true)
+                    {
+                        @:Thanks for coming! We'll email details to you at @Model.Email.
+                    }
+                    else
+                    {
+                        @:Sorry you can't make it.
+                    }
+                </p>
+                <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Start over</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

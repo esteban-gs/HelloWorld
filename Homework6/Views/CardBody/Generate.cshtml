@@ -1,0 +1,53 @@
+﻿
+@model Homework6.Models.CardBody
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"> Birthday Card Generator </a>
+    </nav>
+    <main role="main" class="container">
+        <h1>Send Birthday Card</h1>
+
+        <div class="container">
+            <form asp-action="Generate" method="post" class="form-group">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="From" class="control-label">From</label>
+                    <input asp-for="From" class="form-control" />
+                    <span asp-validation-for="From" class="text-danger field-validation-valid"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="To" class="control-label">To</label>
+                    <input asp-for="To" class="form-control" />
+                    <span asp-validation-for="To" class="text-danger field-validation-valid"></span>
+                </div>                
+                
+                <div class="form-group">
+                    <label asp-for="Message" class="control-label">Message</label>
+                    <input asp-for="Message" class="form-control" />
+                    <span asp-validation-for="Message" class="text-danger field-validation-valid"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Send Card">
+                </div>
+
+                <input name="__RequestVerificationToken" type="hidden" value="...." />
+            </form>
+        </div>
+    </main>
+</body>
+</html>

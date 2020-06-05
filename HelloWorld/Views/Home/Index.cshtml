@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="text-center">
+        <h2>The party is tonight.</h2>
+        <h3>And you're invited</h3>
+
+        <a class="btn btn-primary" href="@Url.Action("RsvpForm", "Home")" role="button">
+            RSVP Now
+        </a>
+
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Product", "Home")">Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Products", "Home")">Products</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

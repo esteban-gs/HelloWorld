@@ -1,0 +1,31 @@
+﻿@model HelloWorld.Models.Product
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <table class="table">
+        <tr scope="row">
+            <td>
+                @Model.Name
+            </td>
+            <td>
+                @Model.Description
+            </td>
+            <td>
+                @Model.Price
+            </td>
+            <td>
+                @Model.ProductCount
+            </td>
+        </tr>
+        </table>
+</body>
+</html>
